@@ -1,0 +1,335 @@
+[
+  {
+    "id": "1",
+    "category": "starters",
+    "nameFr": "Samoussas – Légumes",
+    "nameEn": "Vegetable Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "2",
+    "category": "starters",
+    "nameFr": "Samoussas – Poulet",
+    "nameEn": "Chicken Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "3",
+    "category": "starters",
+    "nameFr": "Samoussas – Bœuf",
+    "nameEn": "Beef Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "4",
+    "category": "starters",
+    "nameFr": "Samoussas – Crevettes",
+    "nameEn": "Shrimp Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "5",
+    "category": "starters",
+    "nameFr": "Samoussas – Fromages",
+    "nameEn": "Cheese Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "6",
+    "category": "starters",
+    "nameFr": "Samoussas – Chèvre miel",
+    "nameEn": "Goat Cheese & Honey Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "7",
+    "category": "starters",
+    "nameFr": "Samoussas – Feta épinard",
+    "nameEn": "Feta & Spinach Samosas",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "8",
+    "category": "starters",
+    "nameFr": "Boulette et bouchons de poulet",
+    "nameEn": "Chicken Meatballs & Chicken Bouchons",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "9",
+    "category": "starters",
+    "nameFr": "Accra / Pâté (Thon ou poulet)",
+    "nameEn": "Accra Fritters / Tuna or Chicken Pâté",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "10",
+    "category": "starters",
+    "nameFr": "Bonbons piments",
+    "nameEn": "Chili Fritters",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "11",
+    "category": "starters",
+    "nameFr": "Beignet choux et oignons / bonbon piment",
+    "nameEn": "Cabbage & Onion Fritter / Chili Fritter",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "12",
+    "category": "starters",
+    "nameFr": "Nems poulet / crevette",
+    "nameEn": "Chicken / Shrimp Spring Rolls",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "13",
+    "category": "main-dishes",
+    "nameFr": "Curry poulet",
+    "nameEn": "Chicken Curry",
+    "price": 3.8,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "14",
+    "category": "main-dishes",
+    "nameFr": "Curry agneau",
+    "nameEn": "Lamb Curry",
+    "price": 3.8,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "15",
+    "category": "main-dishes",
+    "nameFr": "Curry bœuf",
+    "nameEn": "Beef Curry",
+    "price": 3.8,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "16",
+    "category": "main-dishes",
+    "nameFr": "Curry crevettes",
+    "nameEn": "Shrimp Curry",
+    "price": 3.8,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "17",
+    "category": "main-dishes",
+    "nameFr": "Curry poisson",
+    "nameEn": "Fish Curry",
+    "price": 3.8,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "18",
+    "category": "main-dishes",
+    "nameFr": "Curry boulette de bœuf",
+    "nameEn": "Beef Meatball Curry",
+    "price": 3.8,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "19",
+    "category": "main-dishes",
+    "nameFr": "Rougail saucisse thaï et boucané (pimenté)",
+    "nameEn": "Thai Sausage & Smoked Meat Rougail (Spicy)",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "20",
+    "category": "main-dishes",
+    "nameFr": "Curry rouge ou vert – poulet",
+    "nameEn": "Red or Green Chicken Curry",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "21",
+    "category": "main-dishes",
+    "nameFr": "Curry rouge ou vert – crevette",
+    "nameEn": "Red or Green Shrimp Curry",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "22",
+    "category": "main-dishes",
+    "nameFr": "Curry rouge ou vert – saumon",
+    "nameEn": "Red or Green Salmon Curry",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "23",
+    "category": "main-dishes",
+    "nameFr": "Sauté de crevette",
+    "nameEn": "Stir-Fried Shrimp",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "24",
+    "category": "main-dishes",
+    "nameFr": "Sauté d’ailes de poulet",
+    "nameEn": "Stir-Fried Chicken Wings",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "25",
+    "category": "main-dishes",
+    "nameFr": "Sauté de fruits de mer",
+    "nameEn": "Stir-Fried Seafood",
+    "price": 3.5,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "26",
+    "category": "main-dishes",
+    "nameFr": "Riz créole",
+    "nameEn": "Creole Rice",
+    "price": 3.0,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "27",
+    "category": "main-dishes",
+    "nameFr": "Nouilles sautées au poulet",
+    "nameEn": "Stir-Fried Noodles with Chicken",
+    "price": 3.0,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "28",
+    "category": "main-dishes",
+    "nameFr": "Nouilles sautées aux légumes",
+    "nameEn": "Stir-Fried Vegetable Noodles",
+    "price": 3.0,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "29",
+    "category": "main-dishes",
+    "nameFr": "Riz frit au poulet",
+    "nameEn": "Fried Rice with Chicken",
+    "price": 3.0,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "30",
+    "category": "main-dishes",
+    "nameFr": "Riz frit aux légumes",
+    "nameEn": "Vegetable Fried Rice",
+    "price": 3.0,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "31",
+    "category": "main-dishes",
+    "nameFr": "Vindaye poulpe (épice)",
+    "nameEn": "Spicy Octopus Vindaye",
+    "price": 3.9,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "32",
+    "category": "main-dishes",
+    "nameFr": "Achard de légumes",
+    "nameEn": "Pickled / Spiced Mixed Vegetables",
+    "price": 2.9,
+    "unit": "100g",
+    "available": true
+  },
+  {
+    "id": "33",
+    "category": "main-dishes",
+    "nameFr": "Haleem (soupe épicée agneau ou poulet)",
+    "nameEn": "Haleem (Spicy Lamb or Chicken Soup)",
+    "price": 8.0,
+    "unit": "box",
+    "available": true
+  },
+  {
+    "id": "34",
+    "category": "special",
+    "nameFr": "Biryani et dholl puri sur commande",
+    "nameEn": "Biryani & Dholl Puri (On Order)",
+    "price": null,
+    "unit": "sur commande",
+    "available": true
+  },
+  {
+    "id": "35",
+    "category": "desserts",
+    "nameFr": "Boule de coco",
+    "nameEn": "Coconut Ball",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  },
+  {
+    "id": "36",
+    "category": "desserts",
+    "nameFr": "Pudding maïs",
+    "nameEn": "Corn Pudding",
+    "price": 2.0,
+    "unit": "portion",
+    "available": true
+  },
+  {
+    "id": "37",
+    "category": "desserts",
+    "nameFr": "Oundé (boule de semoule de blé)",
+    "nameEn": "Oundé (Wheat Semolina Ball)",
+    "price": 1.0,
+    "unit": "pièce",
+    "available": true
+  }
+]

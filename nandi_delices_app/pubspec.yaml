@@ -1,0 +1,49 @@
+name: nandi_delices
+description: "Nandi Delices - Home Style Food mobile ordering app with direct WhatsApp checkout"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  url_launcher: ^6.3.1
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.3.5
+  intl: ^0.19.0
+  cached_network_image: ^3.4.1
+  geolocator: ^13.0.2
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+  http: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    background_color: "#FFF9EC"
+    theme_color: "#087A3D"
+  macos:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/data/menu.json

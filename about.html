@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À Propos & Contact – Nandi Delices | Saveurs Fait Maison</title>
+  <meta name="description" content="Découvrez l'histoire de Nandi Delices, nos valeurs de cuisine maison authentique, nos horaires d'ouverture et nos coordonnées à Paris.">
+  
+  <meta property="og:title" content="À Propos & Contact – Nandi Delices">
+  <meta property="og:description" content="Cuisine authentique mauricienne et créole. Horaires, adresse et contact direct WhatsApp.">
+  <meta property="og:image" content="assets/store_image.webp">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="assets/logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS for Restaurant Location Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.jpeg" alt="Nandi Delices Logo" class="brand-avatar">
+        <div class="brand-text">
+          <h1 id="nav-restaurant-name">Nandi Delices</h1>
+          <span class="brand-tagline" id="nav-restaurant-tagline">Home Style Food</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="menu.html" class="nav-link" data-i18n="nav_menu">Notre Carte</a></li>
+          <li><a href="cart.html" class="nav-link" data-i18n="nav_cart">Panier & Commande</a></li>
+          <li><a href="about.html" class="nav-link active" data-i18n="nav_about">Le Restaurant</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Changer de langue">
+          <span id="lang-flag">🇬🇧</span>
+          <span id="lang-text">EN</span>
+        </button>
+
+        <a href="cart.html" class="cart-nav-btn" aria-label="Voir le panier">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span data-i18n="nav_cart">Panier</span>
+          <span class="cart-badge" id="nav-cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <h1 data-i18n="about_page_title">Notre Histoire & Le Restaurant</h1>
+      <p data-i18n="about_page_subtitle">L'amour des recettes traditionnelles mauriciennes, des épices fraîches et du partage familial.</p>
+    </header>
+
+    <!-- ABOUT SHOWCASE -->
+    <section class="about-section" style="margin-top:2.5rem;">
+      <div class="about-card">
+        <div class="about-image-side">
+          <img src="assets/store_image.webp" alt="Restaurant Nandi Delices" class="about-img">
+        </div>
+        <div class="about-content-side">
+          <span class="section-subtitle" data-i18n="about_subtitle">NOTRE PASSION</span>
+          <h2 data-i18n="about_title">Bienvenue chez Nandi Delices</h2>
+          <p data-i18n="about_desc">
+            Nandi Delices vous invite à un voyage culinaire unique aux saveurs authentiques et traditionnelles. Nos recettes sont préparées chaque jour à base d'ingrédients frais et d'épices rigoureusement sélectionnées. Des samoussas croustillants aux currys mijotés, découvrez le véritable goût du fait maison.
+          </p>
+
+          <div class="hours-table" style="margin-bottom:1.5rem;">
+            <h4 style="margin-bottom: 0.5rem; color: var(--primary-deep); font-size: 1rem;" data-i18n="hours_title">⏰ Horaires d'Ouverture</h4>
+            <div class="hours-row highlight">
+              <span data-i18n="days_open">Mardi – Dimanche</span>
+              <span id="about-hours-val">11h30 – 15h00 & 18h30 – 22h30</span>
+            </div>
+            <div class="hours-row" style="color: var(--muted-text);">
+              <span data-i18n="days_closed">Lundi</span>
+              <span data-i18n="status_closed">Fermé</span>
+            </div>
+          </div>
+
+          <div>
+            <a href="https://wa.me/33612345678" target="_blank" class="btn-primary" style="display:inline-flex; width:auto;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span data-i18n="contact_whatsapp_btn">Nous contacter sur WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE VALUES -->
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-img-box" style="background:#FFF9C4;">
+            <span style="font-size:2rem;">🍲</span>
+          </div>
+          <div class="feature-info">
+            <h3 data-i18n="value_1_title">100% Fait Maison</h3>
+            <p data-i18n="value_1_desc">Pâtes roulées à la main, currys mijotés plusieurs heures et sauces artisanales.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-img-box" style="background:#E8F5E9;">
+            <span style="font-size:2rem;">🌿</span>
+          </div>
+          <div class="feature-info">
+            <h3 data-i18n="value_2_title">Épices & Fraîcheur</h3>
+            <p data-i18n="value_2_desc">Mélanges d'épices torréfiées maison et ingrédients frais livrés chaque matin.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-img-box" style="background:#FFEBEE;">
+            <span style="font-size:2rem;">❤️</span>
+          </div>
+          <div class="feature-info">
+            <h3 data-i18n="value_3_title">Générosité & Passion</h3>
+            <p data-i18n="value_3_desc">Des portions copieuses et un accueil chaleureux comme à la maison.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESTAURANT LOCATION MAP -->
+    <section class="about-section" style="margin-bottom:4rem;">
+      <div style="background:var(--white); border-radius:var(--radius-xl); border:1px solid var(--border-color); padding:2rem; box-shadow:var(--shadow-sm);">
+        <h2 style="font-size:1.5rem; color:var(--primary-deep); margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+          <span>📍</span>
+          <span data-i18n="restaurant_location_title">Localisation du Restaurant</span>
+        </h2>
+        <p style="color:var(--muted-text); margin-bottom:1.25rem;">
+          <strong id="about-address-display">Restaurant Nandi Delices, 75010 Paris</strong>
+        </p>
+        <div class="map-container-box">
+          <div id="about-map"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Nandi Delices</h2>
+        <p data-i18n="footer_about">Restaurant de spécialités maison. Commandez vos plats préférés et faites-vous livrer ou récupérez votre commande à emporter directement sur WhatsApp.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer_contact_title">Contact & Adresse</h3>
+        <ul class="footer-links">
+          <li>📍 <span id="footer-address">Restaurant Nandi Delices, 75010 Paris</span></li>
+          <li>📞 <span id="footer-phone">+33 6 12 34 56 78</span></li>
+          <li>💬 <span id="footer-whatsapp">WhatsApp : +33 6 12 34 56 78</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer_quick_links">Pages du Site</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="menu.html" class="footer-link" data-i18n="nav_menu">Notre Carte</a></li>
+          <li><a href="cart.html" class="footer-link" data-i18n="nav_cart">Panier & Commande</a></li>
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">Le Restaurant</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Nandi Delices. Tous droits réservés.</div>
+      <div data-i18n="footer_signature">Fait avec passion & saveurs authentiques.</div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM BAR -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Navigation Mobile">
+    <a href="index.html" class="mobile-nav-item" id="mob-nav-home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span data-i18n="nav_home">Accueil</span>
+    </a>
+    <a href="menu.html" class="mobile-nav-item" id="mob-nav-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+      <span data-i18n="nav_menu">Carte</span>
+    </a>
+    <a href="cart.html" class="mobile-nav-item" id="mob-nav-cart">
+      <div style="position:relative; display:inline-block;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span class="cart-badge mob-cart-badge" id="mobile-cart-badge">0</span>
+      </div>
+      <span data-i18n="nav_cart">Panier</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item active" id="mob-nav-about">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      <span data-i18n="nav_about">Infos</span>
+    </a>
+  </nav>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="config.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

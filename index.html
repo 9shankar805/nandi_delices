@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandi Delices – Home Style Food | Saveurs Authentiques</title>
+  <meta name="description" content="Nandi Delices - Restaurant de spécialités faites maison. Samoussas croustillants, currys mijotés, biryanis parfumés et délices traditionnels. Commandez directement sur WhatsApp !">
+  
+  <meta property="og:title" content="Nandi Delices – Home Style Food">
+  <meta property="og:description" content="Goût Authentique, Saveurs Maison. Découvrez notre carte et commandez rapidement sur WhatsApp.">
+  <meta property="og:image" content="assets/hero-banner.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="assets/logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo" id="nav-brand-logo">
+        <img src="assets/logo.jpeg" alt="Nandi Delices Logo" class="brand-avatar">
+        <div class="brand-text">
+          <h1 id="nav-restaurant-name">Nandi Delices</h1>
+          <span class="brand-tagline" id="nav-restaurant-tagline">Home Style Food</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="menu.html" class="nav-link" data-i18n="nav_menu">Notre Carte</a></li>
+          <li><a href="cart.html" class="nav-link" data-i18n="nav_cart">Panier & Commande</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">Le Restaurant</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Changer de langue">
+          <span id="lang-flag">🇬🇧</span>
+          <span id="lang-text">EN</span>
+        </button>
+
+        <a href="cart.html" class="cart-nav-btn" id="open-cart-btn" aria-label="Voir le panier">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span data-i18n="nav_cart">Panier</span>
+          <span class="cart-badge" id="nav-cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         HERO SECTION WITH BACKGROUND SLIDER
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-card" id="hero-slider-card">
+        <div class="hero-slider-bg">
+          <div class="hero-slide active" style="background-image: url('assets/store_image.webp');"></div>
+          <div class="hero-slide" style="background-image: url('assets/hero-banner.jpg');"></div>
+          <div class="hero-slide" style="background-image: url('assets/splash_screen_full.webp');"></div>
+        </div>
+        <div class="hero-slider-overlay"></div>
+
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>✨</span>
+            <span data-i18n="hero_badge">Saveurs Authentiques & Fait Maison</span>
+          </div>
+          <h2 class="hero-title" id="hero-title">
+            <span data-i18n="hero_title_1">Goût Authentique,</span><br>
+            <span data-i18n="hero_title_2">Saveurs Maison</span>
+          </h2>
+          <p class="hero-subtitle" data-i18n="hero_subtitle">
+            Dégustez nos samoussas dorés, currys parfumés, biryanis traditionnels et douceurs préparés chaque jour avec passion.
+          </p>
+          <div class="hero-ctas">
+            <a href="menu.html" class="btn-primary" data-i18n="cta_order_now">
+              <span>Commander Maintenant</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="about.html" class="btn-secondary" data-i18n="cta_discover">Découvrir le restaurant</a>
+          </div>
+
+          <div class="hero-slider-dots" id="hero-slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CLOSED RESTAURANT BANNER
+         ========================================================================= -->
+    <div class="closed-banner-wrap" id="closed-banner">
+      <div class="closed-card">
+        <img src="assets/closed.webp" alt="Restaurant Actuellement Fermé" class="closed-img">
+        <div class="closed-details">
+          <div class="closed-badge-row">
+            <span class="closed-pill" data-i18n="closed_badge">ACTUELLEMENT FERMÉ</span>
+            <span class="preorder-tag" data-i18n="preorder_open">Pré-commandes ouvertes</span>
+          </div>
+          <p class="closed-text" data-i18n="closed_desc">
+            Le restaurant est actuellement fermé. Vous pouvez toujours composer votre panier et envoyer votre commande sur WhatsApp pour la prochaine ouverture !
+          </p>
+          <div class="closed-schedule">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span id="closed-banner-hours">Mardi – Dimanche : 11h30 – 15h00 & 18h30 – 22h30</span>
+          </div>
+          <div>
+            <button class="closed-whatsapp-btn" id="closed-whatsapp-inquiry-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span data-i18n="closed_whatsapp_btn">Poser une question sur WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         ORDER MODES
+         ========================================================================= -->
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-img-box">
+            <img src="assets/delivery_moto.webp" alt="Livraison Express Nandi Delices" class="feature-img">
+          </div>
+          <div class="feature-info">
+            <h3 data-i18n="mode_delivery_title">Livraison Rapide</h3>
+            <p data-i18n="mode_delivery_desc">Plats chauds livrés directement chez vous par notre équipe.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-img-box">
+            <img src="assets/store_image.webp" alt="Retrait sur place Restaurant Nandi Delices" class="feature-img">
+          </div>
+          <div class="feature-info">
+            <h3 data-i18n="mode_pickup_title">À Emporter / Sur Place</h3>
+            <p data-i18n="mode_pickup_desc">Retrait rapide au restaurant avec 0 frais supplémentaire.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-img-box" style="background:#E8F5E9;">
+            <span style="font-size:2rem;">💬</span>
+          </div>
+          <div class="feature-info">
+            <h3 data-i18n="mode_wa_title">Commande Directe WhatsApp</h3>
+            <p data-i18n="mode_wa_desc">Message pré-rempli instantané, confirmation immédiate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         HOW IT WORKS STEP BAR
+         ========================================================================= -->
+    <section class="steps-section">
+      <div class="steps-bar">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-meta">
+            <h4 data-i18n="step_1_title">Choisissez</h4>
+            <p data-i18n="step_1_desc">Parcourez notre carte gourmande</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-meta">
+            <h4 data-i18n="step_2_title">Remplissez</h4>
+            <p data-i18n="step_2_desc">Ajoutez vos plats au panier</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-meta">
+            <h4 data-i18n="step_3_title">Localisez</h4>
+            <p data-i18n="step_3_desc">Indiquez votre adresse de livraison</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-meta">
+            <h4 data-i18n="step_4_title">Validez</h4>
+            <p data-i18n="step_4_desc">Envoi en 1 clic sur WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FEATURED SPECIALTIES TEASER
+         ========================================================================= -->
+    <section class="menu-section">
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="menu_subtitle">FAIT MAISON AVEC AMOUR</span>
+        <h2 class="section-title" data-i18n="home_featured_title">Nos Spécialités Phares</h2>
+      </div>
+
+      <div class="food-grid" id="food-grid-featured">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <div style="text-align:center; margin-top:2.5rem;">
+        <a href="menu.html" class="btn-primary" style="padding:1rem 2.2rem; font-size:1.05rem;">
+          <span data-i18n="view_full_menu_btn">Explorer Toute la Carte (37 Plats)</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT STORY TEASER
+         ========================================================================= -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="about-image-side">
+          <img src="assets/store_image.webp" alt="Restaurant Nandi Delices" class="about-img">
+        </div>
+        <div class="about-content-side">
+          <span class="section-subtitle" data-i18n="about_subtitle">NOTRE HISTOIRE</span>
+          <h2 data-i18n="about_title">Bienvenue chez Nandi Delices</h2>
+          <p data-i18n="about_desc">
+            Nandi Delices vous invite à un voyage culinaire unique aux saveurs authentiques et traditionnelles. Nos recettes sont préparées chaque jour à base d'ingrédients frais et d'épices rigoureusement sélectionnées.
+          </p>
+          <a href="about.html" class="btn-secondary" style="color:var(--primary-deep); border-color:var(--primary-deep); align-self:flex-start;" data-i18n="about_learn_more">En savoir plus sur le restaurant &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Nandi Delices</h2>
+        <p data-i18n="footer_about">
+          Restaurant de spécialités maison. Commandez vos plats préférés et faites-vous livrer ou récupérez votre commande à emporter directement sur WhatsApp.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 data-i18n="footer_contact_title">Contact & Adresse</h3>
+        <ul class="footer-links">
+          <li>📍 <span id="footer-address">Restaurant Nandi Delices, 75010 Paris</span></li>
+          <li>📞 <span id="footer-phone">+33 6 12 34 56 78</span></li>
+          <li>💬 <span id="footer-whatsapp">WhatsApp : +33 6 12 34 56 78</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 data-i18n="footer_quick_links">Pages du Site</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="menu.html" class="footer-link" data-i18n="nav_menu">Notre Carte</a></li>
+          <li><a href="cart.html" class="footer-link" data-i18n="nav_cart">Panier & Commande</a></li>
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">Le Restaurant</a></li>
+          <li><a href="javascript:void(0)" class="footer-link" id="footer-settings-btn">⚙️ <span data-i18n="settings_title">Réglages Restaurant</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Nandi Delices. Tous droits réservés.</div>
+      <div data-i18n="footer_signature">Fait avec passion & saveurs authentiques.</div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MOBILE BOTTOM NAVIGATION BAR
+       ========================================================================= -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Navigation Mobile">
+    <a href="index.html" class="mobile-nav-item active" id="mob-nav-home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span data-i18n="nav_home">Accueil</span>
+    </a>
+    <a href="menu.html" class="mobile-nav-item" id="mob-nav-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+      <span data-i18n="nav_menu">Carte</span>
+    </a>
+    <a href="cart.html" class="mobile-nav-item" id="mob-nav-cart">
+      <div style="position:relative; display:inline-block;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span class="cart-badge mob-cart-badge" id="mobile-cart-badge">0</span>
+      </div>
+      <span data-i18n="nav_cart">Panier</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item" id="mob-nav-about">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      <span data-i18n="nav_about">Infos</span>
+    </a>
+  </nav>
+
+  <!-- =========================================================================
+       SETTINGS / RESTAURANT CONFIG MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="settings-modal">
+    <div class="modal-box" style="max-width:500px;">
+      <div class="modal-header">
+        <h3 data-i18n="settings_title">Réglages Restaurant</h3>
+        <button class="close-btn" id="close-settings-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label" data-i18n="settings_open_label">Statut Ouvert / Fermé</label>
+          <div style="display:flex; gap:1rem;">
+            <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+              <input type="radio" name="restaurant_open_status" value="open" id="settings-status-open" checked>
+              <span style="font-weight:700; color:var(--primary-green);" data-i18n="status_open">🟢 Ouvert</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+              <input type="radio" name="restaurant_open_status" value="closed" id="settings-status-closed">
+              <span style="font-weight:700; color:var(--warm-red);" data-i18n="status_closed">🔴 Fermé (Affiche Bannière)</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="settings-wa-number" data-i18n="settings_wa_label">Numéro WhatsApp (sans + ni espaces)</label>
+          <input type="text" id="settings-wa-number" class="form-input" value="33612345678">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="settings-address" data-i18n="settings_addr_label">Adresse du restaurant</label>
+          <input type="text" id="settings-address" class="form-input" value="Restaurant Nandi Delices, 75010 Paris">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="settings-hours" data-i18n="settings_hours_label">Horaires d'ouverture</label>
+          <input type="text" id="settings-hours" class="form-input" value="Mardi – Dimanche : 11h30 – 15h00 & 18h30 – 22h30">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-primary" id="save-settings-btn" style="width:100%;" data-i18n="btn_save">Enregistrer les réglages</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data & Logic Scripts -->
+  <script src="config.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

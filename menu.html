@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notre Carte Gourmande – Nandi Delices | 37 Plats Maison</title>
+  <meta name="description" content="Découvrez toute la carte de Nandi Delices. Samoussas maison, plats traditionnels mauriciens, currys, biryanis et douceurs. Commandez directement sur WhatsApp.">
+  
+  <meta property="og:title" content="Notre Carte Gourmande – Nandi Delices">
+  <meta property="og:description" content="37 plats faits maison : Samoussas, Currys, Biryanis et Desserts traditionnels.">
+  <meta property="og:image" content="assets/hero-banner.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="assets/logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="menu">
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.jpeg" alt="Nandi Delices Logo" class="brand-avatar">
+        <div class="brand-text">
+          <h1 id="nav-restaurant-name">Nandi Delices</h1>
+          <span class="brand-tagline" id="nav-restaurant-tagline">Home Style Food</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="menu.html" class="nav-link active" data-i18n="nav_menu">Notre Carte</a></li>
+          <li><a href="cart.html" class="nav-link" data-i18n="nav_cart">Panier & Commande</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">Le Restaurant</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Changer de langue">
+          <span id="lang-flag">🇬🇧</span>
+          <span id="lang-text">EN</span>
+        </button>
+
+        <a href="cart.html" class="cart-nav-btn" id="open-cart-btn" aria-label="Voir le panier">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span data-i18n="nav_cart">Panier</span>
+          <span class="cart-badge" id="nav-cart-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <h1 data-i18n="menu_page_title">Notre Carte Gourmande</h1>
+      <p data-i18n="menu_page_subtitle">37 recettes authentiques faites maison préparées chaque jour avec des épices sélectionnées.</p>
+    </header>
+
+    <!-- MENU SECTION -->
+    <section class="menu-section" style="margin-top:2.5rem;">
+      <div class="menu-controls">
+        <div class="search-bar-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="menu-search-input" class="search-input" placeholder="Rechercher un plat (samoussa, biryani, curry...)" data-i18n-placeholder="search_placeholder">
+          <button class="clear-search-btn" id="clear-search-btn">&times;</button>
+        </div>
+
+        <div class="category-tabs" id="category-tabs">
+          <!-- Rendered dynamically -->
+        </div>
+
+        <div class="dietary-filters">
+          <button class="dietary-chip" id="filter-veg-btn">
+            <span>🌱</span>
+            <span data-i18n="filter_veg">Végétarien uniquement</span>
+          </button>
+          <button class="dietary-chip" id="filter-spicy-btn">
+            <span>🌶️</span>
+            <span data-i18n="filter_spicy">Épicé</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Food Grid -->
+      <div class="food-grid" id="food-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ITEM DETAIL MODAL -->
+  <div class="modal-backdrop" id="item-modal">
+    <div class="modal-box" style="max-width:520px;">
+      <div class="modal-header">
+        <h3 id="item-modal-title">Détail du Plat</h3>
+        <button class="close-btn" id="close-item-modal-btn">&times;</button>
+      </div>
+      <div style="width:100%; height:220px; overflow:hidden; background:var(--cream);">
+        <img id="item-modal-img" src="" alt="" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="modal-body">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span id="item-modal-price" style="font-size:1.5rem; font-weight:900; color:var(--primary-deep);"></span>
+          <div id="item-modal-badges" style="display:flex; gap:6px;"></div>
+        </div>
+        <p id="item-modal-desc" style="color:var(--charcoal); font-size:1rem; line-height:1.6;"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-primary" id="item-modal-add-btn" style="width:100%;">
+          <span data-i18n="btn_add_to_cart">Ajouter au panier</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Nandi Delices</h2>
+        <p data-i18n="footer_about">Restaurant de spécialités maison. Commandez vos plats préférés et faites-vous livrer ou récupérez votre commande à emporter directement sur WhatsApp.</p>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer_contact_title">Contact & Adresse</h3>
+        <ul class="footer-links">
+          <li>📍 <span id="footer-address">Restaurant Nandi Delices, 75010 Paris</span></li>
+          <li>📞 <span id="footer-phone">+33 6 12 34 56 78</span></li>
+          <li>💬 <span id="footer-whatsapp">WhatsApp : +33 6 12 34 56 78</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer_quick_links">Pages du Site</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="menu.html" class="footer-link" data-i18n="nav_menu">Notre Carte</a></li>
+          <li><a href="cart.html" class="footer-link" data-i18n="nav_cart">Panier & Commande</a></li>
+          <li><a href="about.html" class="footer-link" data-i18n="nav_about">Le Restaurant</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Nandi Delices. Tous droits réservés.</div>
+      <div data-i18n="footer_signature">Fait avec passion & saveurs authentiques.</div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM BAR -->
+  <nav class="mobile-bottom-nav" id="mobile-bottom-nav" aria-label="Navigation Mobile">
+    <a href="index.html" class="mobile-nav-item" id="mob-nav-home">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span data-i18n="nav_home">Accueil</span>
+    </a>
+    <a href="menu.html" class="mobile-nav-item active" id="mob-nav-menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+      <span data-i18n="nav_menu">Carte</span>
+    </a>
+    <a href="cart.html" class="mobile-nav-item" id="mob-nav-cart">
+      <div style="position:relative; display:inline-block;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <span class="cart-badge mob-cart-badge" id="mobile-cart-badge">0</span>
+      </div>
+      <span data-i18n="nav_cart">Panier</span>
+    </a>
+    <a href="about.html" class="mobile-nav-item" id="mob-nav-about">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+      <span data-i18n="nav_about">Infos</span>
+    </a>
+  </nav>
+
+  <script src="config.js"></script>
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

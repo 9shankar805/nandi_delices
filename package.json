@@ -1,0 +1,14 @@
+{
+  "name": "nandi-delices-web",
+  "version": "1.0.0",
+  "description": "Nandi Delices - Restaurant Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000",
+    "serve": "npx -y serve . -l 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

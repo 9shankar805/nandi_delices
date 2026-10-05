@@ -2,7 +2,7 @@ class RestaurantConfig {
   final String name;
   final String tagline;
   final String subtitle;
-  final String whatsappNumber; // e.g. "33612345678" without spaces
+  final String whatsappNumber; // e.g. "33652764960" without spaces
   final String phone;
   final String currency;
   final String currencySymbol;
@@ -15,8 +15,8 @@ class RestaurantConfig {
     this.name = "Nandi Delices",
     this.tagline = "Home Style Food",
     this.subtitle = "Saveurs authentiques & Fait Maison",
-    this.whatsappNumber = "33612345678",
-    this.phone = "+33 6 12 34 56 78",
+    this.whatsappNumber = "33652764960",
+    this.phone = "+33 6 52 76 49 60",
     this.currency = "EUR",
     this.currencySymbol = "€",
     this.deliveryFee = 2.00,
@@ -58,8 +58,8 @@ class RestaurantConfig {
       name: json['name'] as String? ?? "Nandi Delices",
       tagline: json['tagline'] as String? ?? "Home Style Food",
       subtitle: json['subtitle'] as String? ?? "Saveurs authentiques & Fait Maison",
-      whatsappNumber: json['whatsappNumber'] as String? ?? "33612345678",
-      phone: json['phone'] as String? ?? "+33 6 12 34 56 78",
+      whatsappNumber: json['whatsappNumber'] as String? ?? "33652764960",
+      phone: json['phone'] as String? ?? "+33 6 52 76 49 60",
       currency: json['currency'] as String? ?? "EUR",
       currencySymbol: json['currencySymbol'] as String? ?? "€",
       deliveryFee: (json['deliveryFee'] as num?)?.toDouble() ?? 2.00,

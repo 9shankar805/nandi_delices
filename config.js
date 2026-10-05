@@ -8,8 +8,8 @@ const DEFAULT_CONFIG = {
   tagline: "Home Style Food",
   subtitle: "Saveurs authentiques & Fait Maison",
   // International format without + or spaces for wa.me URL
-  whatsappNumber: "33612345678", 
-  phone: "+33 6 12 34 56 78",
+  whatsappNumber: "33652764960", 
+  phone: "+33 6 52 76 49 60",
   currency: "EUR",
   currencySymbol: "€",
   deliveryFee: 2.00,

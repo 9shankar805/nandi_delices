@@ -175,9 +175,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       keyboardType: TextInputType.phone,
                       decoration: const InputDecoration(
                         labelText: "Numéro WhatsApp de réception (Format international sans +)",
-                        hintText: "Ex: 33612345678",
+                        hintText: "Ex: 33652764960",
                         prefixIcon: Icon(Icons.chat, color: AppTheme.whatsappGreen),
-                        helperText: "Exemple: 33612345678 (pour la France), 23051234567 (pour Maurice)",
+                        helperText: "Exemple: 33652764960 (pour la France), 23051234567 (pour Maurice)",
                       ),
                       validator: (v) {
                         if (v == null || v.isEmpty) return "Numéro WhatsApp requis";
@@ -196,7 +196,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       keyboardType: TextInputType.phone,
                       decoration: const InputDecoration(
                         labelText: "Téléphone d'appel",
-                        hintText: "+33 6 12 34 56 78",
+                        hintText: "+33 6 52 76 49 60",
                         prefixIcon: Icon(Icons.phone),
                       ),
                     ),
